@@ -1,0 +1,65 @@
+/* FOOTER */
+.page-footer {
+  color: $main-bg-color;
+  background-color: $secondary-dark-bg-color;
+}
+
+/* contacts block */
+
+.page-adress {
+  min-width: 231px;
+
+  & .item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.footer-adress {
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.footer-contacts {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  @include transition-1-selector(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+/* subscribe block */
+.footer-subscribe-form {
+  & .form-label {
+    display: block;
+  }
+  & .form-input {
+    min-width: 358px;
+    min-height: 50px;
+    margin-right: 12px;
+    padding-left: 16px;
+
+    background-color: transparent;
+    color: $main-bg-color;
+
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+/* FOOTER end */
+/* ============================== */

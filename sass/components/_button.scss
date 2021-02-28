@@ -1,0 +1,57 @@
+/* button */
+.button {
+  display: inline-block;
+  min-width: 200px;
+  min-height: 50px;
+  padding: 10px;
+
+  color: $main-bg-color;
+  background-color: $accent-color;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0;
+
+  @include transition-1-selector(box-shadow);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  // modal window
+  .modal-form & {
+    align-self: center;
+  }
+
+  // portfolio filters
+  .filter-buttons & {
+    min-height: 38px;
+    padding: 6px 22px;
+
+    color: $title-text-color;
+    background-color: $secondary-light-bg-color;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+
+    box-shadow: 0;
+
+    @include transition-3-selectors(color, background-color, box-shadow);
+
+    &:focus,
+    &:hover {
+      color: $main-bg-color;
+      background-color: $accent-color;
+      box-shadow: $shadow-filter-button-hover;
+    }
+  }
+}

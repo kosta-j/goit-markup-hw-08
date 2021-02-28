@@ -1,0 +1,33 @@
+/* WHAT WE DO */
+.whatwedo {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 * var(--card-grid-gap));
+  margin-bottom: calc(-1 * var(--card-grid-gap));
+}
+
+.whatwedo-item {
+  position: relative;
+  width: calc(100% / 3 - var(--card-grid-gap));
+  margin-right: var(--card-grid-gap);
+  margin-bottom: var(--card-grid-gap);
+}
+
+.whatwedo .title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 27px 15px;
+
+  background-color: rgba(47, 48, 58, 0.8);
+  color: $main-bg-color;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* WHAT WE DO end */
+/* ============================== */

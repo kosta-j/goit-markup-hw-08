@@ -1,0 +1,14 @@
+@mixin transition-1-selector($selector) {
+  transition: $selector 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin transition-2-selectors($selector-1, $selector-2) {
+  transition: $selector-1 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    $selector-2 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin transition-3-selectors($selector-1, $selector-2, $selector-3) {
+  transition: $selector-1 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    $selector-2 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    $selector-3 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,47 @@
+/* ============================== */
+
+/* RESETS */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.page-adress {
+  font-style: normal;
+}
+/* RESETS end */
+/* ============================== */
+
+body {
+  margin: auto;
+  color: $primary-text-color;
+  background-color: $main-bg-color;
+
+  font-weight: 400;
+  font-family: $main-font-family;
+  letter-spacing: 0.03em;
+}

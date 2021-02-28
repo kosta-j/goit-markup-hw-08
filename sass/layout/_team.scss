@@ -1,0 +1,41 @@
+/* TEAM */
+.team {
+  background-color: $secondary-light-bg-color;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 * var(--card-grid-gap));
+  margin-bottom: calc(-1 * var(--card-grid-gap));
+}
+
+.team-item {
+  width: calc(100% / 4 - var(--card-grid-gap));
+  margin-right: var(--card-grid-gap);
+  margin-bottom: var(--card-grid-gap);
+
+  background-color: $main-bg-color;
+  border-radius: 0 0 4px 4px;
+  box-shadow: $shadow-team-card;
+}
+
+.team-description-wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.position {
+  .team & {
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+  }
+}
+
+/* TEAM end */
+/* ============================== */
