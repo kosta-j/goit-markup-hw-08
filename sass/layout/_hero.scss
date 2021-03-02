@@ -1,6 +1,5 @@
 /* HERO */
 .hero {
-  max-width: 1600px;
   margin: 0 auto;
   color: $main-bg-color;
   background-color: $secondary-dark-bg-color;
@@ -8,23 +7,79 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/hero/hero-bg.jpg);
+    url('../images/hero/mobile-hero-bg.jpg');
+  background-size: cover;
   background-position: center;
-  object-fit: cover;
+  background-repeat: no-repeat;
+  // object-fit: cover;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/hero/mobile-hero-bg@2x.jpg');
+  }
+
+  // tablet
+  @include screen(tablet) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/hero/tablet-hero-bg.jpg');
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/hero/tablet-hero-bg@2x.jpg');
+  }
+
+  // desktop
+  @include screen(desktop) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/hero/desktop-hero-bg.jpg');
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1200px),
+    screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/hero/desktop-hero-bg@2x.jpg');
+  }
 }
 
 .hero-title {
-  width: 700px;
-  margin-bottom: 30px;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
+  @include font(26px, 42px);
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @include screen(desktop) {
+    max-width: 700px;
+    font-weight: 900;
+    @include font(44px, 60px);
+  }
+  letter-spacing: 0.06em;
 }
+
 /* HERO end */
 /* ============================== */

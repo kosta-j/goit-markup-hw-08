@@ -33,10 +33,15 @@
   }
 }
 
-// .hero-container {
-//   padding: 200px 0;
-//   text-align: center;
-// }
+.hero-container {
+  padding-top: 118px;
+  padding-bottom: 118px;
+  text-align: center;
+
+  @include screen(desktop) {
+    padding: 200px 0;
+  }
+}
 
 // .whatwedo-container {
 //   padding-top: 0;
