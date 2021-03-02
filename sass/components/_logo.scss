@@ -1,9 +1,12 @@
 /* logo  */
 .logo {
-  font-weight: 700;
-  font-size: 26px;
   font-family: $logo-font-family;
-  line-height: 1.19;
+  font-weight: 700;
+  @include font(24px, 28px);
+
+  @include screen(desktop) {
+    @include font(26px, 31px);
+  }
 }
 
 .logo-span {
@@ -14,10 +17,15 @@
 }
 
 .header-logo {
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
   color: $title-text-color;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @include screen(desktop) {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 .footer-logo {
