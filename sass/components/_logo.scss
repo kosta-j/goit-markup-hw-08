@@ -18,8 +18,14 @@
 
 .header-logo {
   color: $title-text-color;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  @include screen(tablet) {
+    margin-right: 88px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
 
   @include screen(desktop) {
     margin-right: 93px;

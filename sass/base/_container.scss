@@ -27,7 +27,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
 
-  @include screen(desktop) {
+  @include screen(tablet) {
     padding-top: 0;
     padding-bottom: 0;
   }
