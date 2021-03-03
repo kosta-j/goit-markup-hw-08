@@ -2,7 +2,7 @@
 
 .section-title {
   // margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   color: $title-text-color;
 
@@ -11,6 +11,8 @@
   text-align: center;
 
   @include screen(desktop) {
+    margin-bottom: 50px;
+
     @include font(36px, 42px);
   }
 }
