@@ -1,14 +1,16 @@
 /* section title */
-.section {
-  .section-title {
-    margin-top: 0;
-    margin-bottom: 50px;
 
-    color: $title-text-color;
+.section-title {
+  // margin-top: 0;
+  margin-bottom: 50px;
 
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
+  color: $title-text-color;
+
+  font-weight: 700;
+  @include font(28px, 33px);
+  text-align: center;
+
+  @include screen(desktop) {
+    @include font(36px, 42px);
   }
 }

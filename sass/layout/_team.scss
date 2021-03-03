@@ -4,35 +4,64 @@
 }
 
 .team-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: calc(-1 * var(--card-grid-gap));
   margin-bottom: calc(-1 * var(--card-grid-gap));
+
+  @include screen(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: calc(-1 * var(--card-grid-gap));
+  }
 }
 
 .team-item {
-  width: calc(100% / 4 - var(--card-grid-gap));
-  margin-right: var(--card-grid-gap);
   margin-bottom: var(--card-grid-gap);
 
   background-color: $main-bg-color;
   border-radius: 0 0 4px 4px;
   box-shadow: $shadow-team-card;
+
+  @include screen(tablet) {
+    width: calc(100% / 2 - var(--card-grid-gap));
+    margin-right: var(--card-grid-gap);
+  }
+
+  @include screen(desktop) {
+    width: calc(100% / 4 - var(--card-grid-gap));
+  }
 }
 
 .team-description-wrapper {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   padding-left: 15px;
   padding-right: 15px;
 }
+// .team-list {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-right: calc(-1 * var(--card-grid-gap));
+//   margin-bottom: calc(-1 * var(--card-grid-gap));
+// }
+
+// .team-item {
+// width: calc(100% / 4 - var(--card-grid-gap));
+// margin-right: var(--card-grid-gap);
+//   margin-bottom: var(--card-grid-gap);
+
+// background-color: $main-bg-color;
+// border-radius: 0 0 4px 4px;
+// box-shadow: $shadow-team-card;
+// }
+
+// .team-description-wrapper {
+//   padding-bottom: 30px;
+// }
 
 .position {
   .team & {
     margin-bottom: 16px;
 
-    font-size: 16px;
-    line-height: 1.19;
+    @include font(16px, 19px);
     text-align: center;
   }
 }

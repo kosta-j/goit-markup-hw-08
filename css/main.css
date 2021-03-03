@@ -24,6 +24,7 @@
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 h1,
@@ -308,14 +309,20 @@ body {
 }
 
 /* section title */
-.section .section-title {
-  margin-top: 0;
+.section-title {
   margin-bottom: 50px;
   color: #212121;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
+}
+
+@media only screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 .advantages .title {
@@ -846,18 +853,21 @@ body {
 }
 
 .team-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-right: calc(-1 * var(--card-grid-gap));
   margin-bottom: calc(-1 * var(--card-grid-gap));
 }
 
+@media only screen and (min-width: 768px) {
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: calc(-1 * var(--card-grid-gap));
+  }
+}
+
 .team-item {
-  width: calc(100% / 4 - var(--card-grid-gap));
-  margin-right: var(--card-grid-gap);
   margin-bottom: var(--card-grid-gap);
   background-color: #ffffff;
   border-radius: 0 0 4px 4px;
@@ -865,9 +875,22 @@ body {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+@media only screen and (min-width: 768px) {
+  .team-item {
+    width: calc(100% / 2 - var(--card-grid-gap));
+    margin-right: var(--card-grid-gap);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .team-item {
+    width: calc(100% / 4 - var(--card-grid-gap));
+  }
+}
+
 .team-description-wrapper {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   padding-left: 15px;
   padding-right: 15px;
 }
