@@ -1,4 +1,7 @@
 {
+    "liveServer.settings.useLocalIp": true, 
+    "liveServer.settings.host": "localhost"
+
     "liveSassCompile.settings.formats": [
         {
             "format": "expanded",

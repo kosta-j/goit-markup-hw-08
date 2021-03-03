@@ -1,20 +1,29 @@
 /* ADVANTAGES */
 .advantages {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: calc(-1 * var(--card-grid-gap));
+  & .text {
+    @include font(14px, 24px);
+  }
   margin-bottom: calc(-1 * var(--card-grid-gap));
 
-  & .text {
-    font-size: 14px;
-    line-height: 1.71;
+  @include screen(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: calc(-1 * var(--card-grid-gap));
   }
 }
 
 .advantages-item {
-  width: calc(100% / 4 - var(--card-grid-gap));
-  margin-right: var(--card-grid-gap);
+  width: 100%;
   margin-bottom: var(--card-grid-gap);
+
+  @include screen(tablet) {
+    width: calc(100% / 2 - var(--card-grid-gap));
+    margin-right: var(--card-grid-gap);
+  }
+
+  @include screen(desktop) {
+    width: calc(100% / 4 - var(--card-grid-gap));
+  }
 }
 
 .advantages-icon-container {

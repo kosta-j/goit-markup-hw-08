@@ -67,7 +67,7 @@ body {
 
 .container {
   width: 100%;
-  padding: 0 15px;
+  padding: 60px 15px;
   margin: 0 auto;
   border: var(--outline);
 }
@@ -314,6 +314,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .team .title {
@@ -728,12 +729,6 @@ body {
 /* ============================== */
 /* ADVANTAGES */
 .advantages {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-right: calc(-1 * var(--card-grid-gap));
   margin-bottom: calc(-1 * var(--card-grid-gap));
 }
 
@@ -742,10 +737,33 @@ body {
   line-height: 1.71;
 }
 
+@media only screen and (min-width: 768px) {
+  .advantages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: calc(-1 * var(--card-grid-gap));
+  }
+}
+
 .advantages-item {
-  width: calc(100% / 4 - var(--card-grid-gap));
-  margin-right: var(--card-grid-gap);
+  width: 100%;
   margin-bottom: var(--card-grid-gap);
+}
+
+@media only screen and (min-width: 768px) {
+  .advantages-item {
+    width: calc(100% / 2 - var(--card-grid-gap));
+    margin-right: var(--card-grid-gap);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .advantages-item {
+    width: calc(100% / 4 - var(--card-grid-gap));
+  }
 }
 
 .advantages-icon-container {
