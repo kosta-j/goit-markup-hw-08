@@ -43,9 +43,14 @@
   }
 }
 
-// .whatwedo-container {
-//   padding-top: 0;
-// }
+.whatwedo-container {
+  display: none;
+
+  @include screen(desktop) {
+    display: block;
+    padding-top: 0;
+  }
+}
 
 // .footer-container {
 //   display: flex;
