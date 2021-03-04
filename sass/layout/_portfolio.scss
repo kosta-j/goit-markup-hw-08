@@ -21,15 +21,16 @@
 }
 
 .project-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: calc(-1 * var(--card-grid-gap));
   margin-bottom: calc(-1 * var(--card-grid-gap));
+
+  @include screen(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: calc(-1 * var(--card-grid-gap));
+  }
 }
 
 .project-item {
-  flex-basis: calc(100% / 3 - var(--card-grid-gap));
-  margin-right: var(--card-grid-gap);
   margin-bottom: var(--card-grid-gap);
 
   border: 1px solid #eeeeee;
@@ -45,13 +46,21 @@
       box-shadow: $shadow-portfolio-card-hover;
     }
   }
+
+  @include screen(tablet) {
+    flex-basis: calc(100% / 2 - var(--card-grid-gap));
+    margin-right: var(--card-grid-gap);
+  }
+
+  @include screen(desktop) {
+    flex-basis: calc(100% / 3 - var(--card-grid-gap));
+  }
 }
 
 .description {
   .project-list & {
     color: $primary-text-color;
-    font-size: 16px;
-    line-height: 1.87;
+    @include font(16px, 30px);
   }
 }
 
