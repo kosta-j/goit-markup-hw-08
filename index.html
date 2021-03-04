@@ -208,7 +208,7 @@
                             srcset="./images/team/mobile-ihor.jpg 1x, ./images/team/mobile-ihor@2x.jpg 2x" 
                             media="(min-width: 320px)">
                             
-                            <img class="photo" src="./images/team/desktop-ihor.jpg" alt="фото Игоря">
+                            <img src="./images/team/mobile-ihor.jpg" alt="фото Игоря">
                         </picture>
                         <div class="team-description-wrapper">
                             <h3 class="title">Игорь Демьяненко</h3>
@@ -265,7 +265,7 @@
                             <source
                             srcset="./images/team/mobile-olga.jpg 1x, ./images/team/mobile-olga@2x.jpg 2x" 
                             media="(min-width: 320px)">
-                            <img class="photo" src="./images/team/desktop-olga.jpg" alt="фото Ольги">
+                            <img  src="./images/team/mobile-olga.jpg" alt="фото Ольги">
                         </picture>
                         <div class="team-description-wrapper">
                             <h3 class="title">Ольга Репина</h3>
@@ -322,7 +322,7 @@
                             <source 
                             srcset="./images/team/mobile-nikolay.jpg 1x, ./images/team/mobile-nikolay@2x.jpg 2x" 
                             media="(min-width: 320px)">
-                            <img class="photo" src="./images/team/desktop-nikolay.jpg">
+                            <img src="./images/team/mobile-nikolay.jpg">
                         </picture>
                         <div class="team-description-wrapper">
                             <h3 class="title">Николай Тарасов</h3>
@@ -379,7 +379,7 @@
                             <source 
                             srcset="./images/team/mobile-michael.jpg 1x, ./images/team/mobile-michael@2x.jpg 2x"
                             media="(min-width: 320px)">
-                            <img src="./images/team/desktop-michael.jpg" alt="фото Михаила">
+                            <img src="./images/team/mobile-michael.jpg" alt="фото Михаила">
                         </picture>
                         <div class="team-description-wrapper">
                             <h3 class="title">Михаил Ермаков</h3>
@@ -473,7 +473,7 @@
         </section>
         <!-- CLIENTS end -->
     </main>
-    <footer class="page-footer visually-hidden">
+    <footer class="page-footer">
         <div class="footer-container container">
             <div class="footer-wrapper-contacts">
                 <!-- lOGO -->
@@ -519,15 +519,17 @@
                 </ul>
             </div>
             <form action="#" class="footer-subscribe-form">
-                <label for="subscribe-email" class="title form-label">Подпишитесь на рассылку</label>
-                <input 
-                    class="form-input"
-                    type="email" 
-                    name="email" 
-                    id="subscribe-email"
-                    placeholder="E-mail"
-                >
-                <button type="submit" class="button">Подписаться</button>
+                    <label for="subscribe-email" class="title form-label">Подпишитесь на рассылку</label>
+                <div class="footer-subscribe-inputs-wrapper">
+                    <input 
+                        class="form-input"
+                        type="email" 
+                        name="email" 
+                        id="subscribe-email"
+                        placeholder="E-mail"
+                    >
+                    <button type="submit" class="button">Подписаться</button>
+                </div>
             </form>
         </div>
     </footer>

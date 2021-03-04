@@ -137,6 +137,39 @@ body {
   }
 }
 
+.footer-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer-container {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 /* logo  */
 .logo {
   font-family: "Raleway", sans-serif;
@@ -1008,12 +1041,25 @@ body {
 }
 
 /* contacts block */
-.page-adress {
-  min-width: 231px;
+.footer-wrapper-contacts {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer-wrapper-contacts {
+    text-align: initial;
+  }
 }
 
 .page-adress .item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .page-adress .item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .footer-adress {
@@ -1035,15 +1081,31 @@ body {
   color: #2196f3;
 }
 
+/* social-links block */
+.footer-wrapper-social {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer-wrapper-social {
+    text-align: initial;
+  }
+}
+
 /* subscribe block */
+.footer-subscribe-form {
+  text-align: center;
+}
+
 .footer-subscribe-form .form-label {
   display: block;
 }
 
 .footer-subscribe-form .form-input {
-  min-width: 358px;
+  min-width: 100%;
   min-height: 50px;
-  margin-right: 12px;
+  margin-bottom: 20px;
   padding-left: 16px;
   background-color: transparent;
   color: #ffffff;
@@ -1068,6 +1130,38 @@ body {
 
 .footer-subscribe-form .form-input::placeholder {
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer-subscribe-form .form-input {
+    min-width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-subscribe-form {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer-subscribe-form {
+    width: 570px;
+    margin: 0;
+    text-align: initial;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer-subscribe-inputs-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 /* FOOTER end */

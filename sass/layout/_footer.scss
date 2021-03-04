@@ -5,18 +5,27 @@
 }
 
 /* contacts block */
+.footer-wrapper-contacts {
+  margin-bottom: 60px;
+  text-align: center;
+
+  @include screen(desktop) {
+    text-align: initial;
+  }
+}
 
 .page-adress {
-  min-width: 231px;
-
   & .item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+
+    @include screen(desktop) {
+      margin-bottom: 9px;
+    }
   }
 }
 
 .footer-adress {
-  font-size: 14px;
-  line-height: 1.71;
+  @include font(14px, 24px);
 }
 
 .footer-contacts {
@@ -34,15 +43,27 @@
   }
 }
 
+/* social-links block */
+.footer-wrapper-social {
+  margin-bottom: 60px;
+  text-align: center;
+
+  @include screen(desktop) {
+    text-align: initial;
+  }
+}
+
 /* subscribe block */
 .footer-subscribe-form {
+  text-align: center;
+
   & .form-label {
     display: block;
   }
   & .form-input {
-    min-width: 358px;
+    min-width: 100%;
     min-height: 50px;
-    margin-right: 12px;
+    margin-bottom: 20px;
     padding-left: 16px;
 
     background-color: transparent;
@@ -58,6 +79,30 @@
     &::placeholder {
       color: rgba(255, 255, 255, 0.6);
     }
+
+    @include screen(desktop) {
+      min-width: 358px;
+      margin-bottom: 0; //subscribe button is moving to be in the same line with input
+      margin-right: 12px;
+    }
+  }
+
+  @include screen(tablet) {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include screen(desktop) {
+    width: 570px;
+    margin: 0;
+    text-align: initial;
+  }
+}
+
+.footer-subscribe-inputs-wrapper {
+  @include screen(desktop) {
+    display: flex;
   }
 }
 

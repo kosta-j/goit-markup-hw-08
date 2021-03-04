@@ -52,12 +52,29 @@
   }
 }
 
+.footer-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  align-items: center;
+
+  @include screen(tablet) {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+
+    flex-wrap: wrap;
+  }
+
+  @include screen(desktop) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
 // .footer-container {
 //   display: flex;
-//   justify-content: space-between;
-//   align-items: baseline;
-//   padding-top: 60px;
-//   padding-bottom: 60px;
+// justify-content: space-between;
+// align-items: baseline;
 
 //   color: $main-bg-color;
 // }

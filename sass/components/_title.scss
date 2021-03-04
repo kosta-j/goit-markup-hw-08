@@ -22,8 +22,7 @@
 
     color: $main-bg-color;
     font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
+    @include font(14px, 16px);
     text-transform: uppercase;
   }
 
