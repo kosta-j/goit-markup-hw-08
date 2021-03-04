@@ -2,22 +2,33 @@
 .clients {
   display: flex;
   flex-wrap: wrap;
-  margin-right: calc(-1 * var(--card-grid-gap));
+  align-items: center;
+  justify-content: center;
   margin-bottom: calc(-1 * var(--card-grid-gap));
 
-  align-items: center;
+  @include screen(tablet) {
+    margin-right: calc(-1 * var(--card-grid-gap));
+  }
 }
 
 .clients-item {
+  // width: 100%;
+
   width: calc(100% / 2 - var(--card-grid-gap));
   height: 90px;
-  margin-right: var(--card-grid-gap);
   margin-bottom: var(--card-grid-gap);
 
   color: $primary-text-color;
 
+  @media screen and (max-width: 767px) {
+    &:nth-child(2n-1) {
+      margin-right: var(--card-grid-gap);
+    }
+  }
+
   @include screen(tablet) {
     width: calc(100% / 3 - var(--card-grid-gap));
+    margin-right: var(--card-grid-gap);
   }
 
   @include screen(desktop) {

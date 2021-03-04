@@ -61,7 +61,7 @@
   background-color: $main-bg-color;
   border: var(--outline);
 
-  overflow-x: scroll;
+  overflow-y: scroll;
   opacity: 0;
   @include transition-2-selectors(opacity, transform);
 
@@ -79,7 +79,12 @@
 }
 
 .mobile-menu-nav {
-  @include font(40px, 47px);
+  font-size: 2em;
+  line-height: 1.18;
+
+  @media screen and (min-width: 479px) {
+    @include font(40px, 47px);
+  }
 
   & .link:focus,
   & .link:hover {
@@ -100,23 +105,37 @@
 .mobile-contacts-item {
   margin-bottom: 32px;
   &:first-child {
-    @include font(34px, 40px);
+    font-size: 1em;
+    line-height: 1.18;
+
+    @media screen and (min-width: 479px) {
+      @include font(34px, 40px);
+    }
     color: $accent-color;
   }
 }
 
 .mobile-menu-social-links {
   display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 479px) {
+    margin-bottom: 10px;
+  }
+
+  @include font(18px, 22px);
   color: $accent-color;
 }
 
 .mobile-social-links-item {
+  margin-right: 10px;
+  @media screen and (max-width: 479px) {
+    margin-bottom: 10px;
+  }
+
   &:not(:last-child) {
     padding-right: 10px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-  }
-  &:not(:first-child) {
-    padding-left: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
   }
 }
 
