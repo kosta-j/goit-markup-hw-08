@@ -34,6 +34,8 @@
   // portfolio filters
   .filter-buttons & {
     min-height: 38px;
+    min-width: initial;
+    margin-bottom: 15px; //only for mobile
     padding: 6px 22px;
 
     color: $title-text-color;

@@ -70,6 +70,7 @@ body {
   width: 100%;
   padding: 60px 15px;
   margin: 0 auto;
+  border: var(--outline);
 }
 
 @media screen and (min-width: 480px) {
@@ -254,6 +255,8 @@ body {
 
 .filter-buttons .button {
   min-height: 38px;
+  min-width: initial;
+  margin-bottom: 15px;
   padding: 6px 22px;
   color: #212121;
   background-color: #f5f4fa;
@@ -1170,10 +1173,24 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  .filter-buttons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .filter-buttons {
+    margin-bottom: 50px;
+  }
 }
 
 .filter-item:not(:last-child) {
