@@ -10,8 +10,7 @@
 
   font-family: inherit;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
+  @include font(16px, 30px);
   letter-spacing: 0.06em;
 
   border: 0;
@@ -42,9 +41,7 @@
     background-color: $secondary-light-bg-color;
 
     font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
-
+    @include font(16px, 26px);
     box-shadow: 0;
 
     @include transition-3-selectors(color, background-color, box-shadow);

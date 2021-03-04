@@ -22,6 +22,8 @@
     color: $accent-color;
     cursor: pointer;
   }
+
+  @include transition-1-selector(color);
 }
 
 .burger-btn {
@@ -123,10 +125,6 @@
   right: 15px;
   top: 10px;
   color: inherit;
-
-  &:focus {
-    color: $accent-color;
-  }
 }
 
 .mobile-nav-close-icon {
