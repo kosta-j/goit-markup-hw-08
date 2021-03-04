@@ -3,11 +3,15 @@
     const mobileMenuRef = document.querySelector("[data-menu]");
     const mobileBtnClose = document.querySelector("[data-menu-close]");
   
-    menuBtnRef.addEventListener("click", () => {
+  menuBtnRef.addEventListener("click", () => {
+      document.body.classList.toggle('modal-open')
+      
       mobileMenuRef.classList.toggle("is-open");
     })
 
-    mobileBtnClose.addEventListener('click', () => {
+  mobileBtnClose.addEventListener('click', () => {
+      document.body.classList.toggle('modal-open')
+      
       mobileMenuRef.classList.toggle("is-open");
     });
   })()
