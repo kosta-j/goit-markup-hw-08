@@ -70,7 +70,6 @@ body {
   width: 100%;
   padding: 60px 15px;
   margin: 0 auto;
-  border: var(--outline);
 }
 
 @media screen and (min-width: 480px) {
