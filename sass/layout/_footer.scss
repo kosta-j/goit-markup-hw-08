@@ -31,8 +31,7 @@
 .footer-contacts {
   display: block;
   color: rgba(255, 255, 255, 0.6);
-  font-size: 14px;
-  line-height: 1.71;
+  @include font(14px, 24px);
   letter-spacing: 0.03em;
 
   @include transition-1-selector(color);
@@ -69,8 +68,7 @@
     background-color: transparent;
     color: $main-bg-color;
 
-    font-size: 16px;
-    line-height: 1.25;
+    @include font(16px, 20px);
     letter-spacing: 0.03em;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
