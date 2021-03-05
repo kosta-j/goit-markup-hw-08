@@ -78,10 +78,10 @@
 }
 
 .mobile-menu-nav {
-  font-size: 2em;
+  font-size: 34px;
   line-height: 1.18;
 
-  @media screen and (min-width: 479px) {
+  @media screen and (min-width: 480px) {
     @include font(40px, 47px);
   }
 
@@ -97,17 +97,22 @@
 
 .mobile-menu-contacts {
   margin-bottom: 64px;
-  @include font(24px, 28px);
+  font-size: 20px;
+  line-height: 1.17;
   color: $primary-text-color;
+
+  @media screen and (min-width: 480px) {
+    @include font(24px, 28px);
+  }
 }
 
 .mobile-contacts-item {
   margin-bottom: 32px;
   &:first-child {
-    font-size: 1em;
+    font-size: 28px;
     line-height: 1.18;
 
-    @media screen and (min-width: 479px) {
+    @media screen and (min-width: 480px) {
       @include font(34px, 40px);
     }
     color: $accent-color;
@@ -116,14 +121,13 @@
 
 .mobile-menu-social-links {
   display: flex;
-  flex-wrap: wrap;
-
-  @media screen and (max-width: 479px) {
-    margin-bottom: 10px;
-  }
-
-  @include font(18px, 22px);
+  font-size: 11px;
+  line-height: 1.22;
   color: $accent-color;
+
+  @media screen and (min-width: 480px) {
+    @include font(18px, 22px);
+  }
 }
 
 .mobile-social-links-item {
