@@ -155,17 +155,21 @@
 }
 
 .modal-form-check-policy-label {
-  @include font(11px, 14px);
   margin-bottom: 30px;
 }
 
 .modal-form-check-policy-title {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
+  font-size: 6px;
+  @media screen and (min-width: 480px) {
+    @include font(11px, 13px);
+  }
 
   @include screen(desktop) {
-    @include font(11px, 14px);
+    @include font(14px, 24px);
   }
 }
 
@@ -173,16 +177,25 @@
 .modal-form-check-policy-title::before {
   content: '';
   display: block;
-  width: 16px;
-  height: 15px;
+  width: 13px;
+  height: 12px;
   margin-right: 8px;
 
   background-image: url('../images/modal-window/checkbox.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
 
   @include transition-1-selector(background-image);
 
+  @media screen and (min-width: 480px) {
+    width: 16px;
+    height: 15px;
+  }
+
   .modal-form-check-policy:checked + & {
     background-image: url('../images/modal-window/checkbox-checked.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .modal-form-check-policy:focus + & {
@@ -207,6 +220,7 @@
   width: 30px;
   height: 30px;
   color: #000000;
+  background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;

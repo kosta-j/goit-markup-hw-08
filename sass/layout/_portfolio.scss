@@ -38,6 +38,7 @@
   & .link {
     display: block;
     box-shadow: 0;
+    height: 100%;
 
     @include transition-1-selector(box-shadow);
 
@@ -80,7 +81,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    transform: translateY(100%);
+    transform: translateY(102%);
 
     display: flex;
     align-items: center;

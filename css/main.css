@@ -73,6 +73,7 @@ body.modal-open {
   width: 100%;
   padding: 60px 15px;
   margin: 0 auto;
+  outline: 1px solid tomato;
 }
 
 @media screen and (min-width: 480px) {
@@ -1276,6 +1277,7 @@ body.modal-open {
   display: block;
   -webkit-box-shadow: 0;
           box-shadow: 0;
+  height: 100%;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1323,8 +1325,8 @@ body.modal-open {
   position: absolute;
   left: 0;
   top: 0;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(102%);
+          transform: translateY(102%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1554,8 +1556,6 @@ body.modal-open {
 }
 
 .modal-form-check-policy-label {
-  font-size: 11px;
-  line-height: 1.27;
   margin-bottom: 30px;
 }
 
@@ -1566,30 +1566,52 @@ body.modal-open {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  font-size: 6px;
+}
+
+@media screen and (min-width: 480px) {
+  .modal-form-check-policy-title {
+    font-size: 11px;
+    line-height: 1.18;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
   .modal-form-check-policy-title {
-    font-size: 11px;
-    line-height: 1.27;
+    font-size: 14px;
+    line-height: 1.71;
   }
 }
 
 .modal-form-check-policy-title::before {
   content: '';
   display: block;
-  width: 16px;
-  height: 15px;
+  width: 13px;
+  height: 12px;
   margin-right: 8px;
   background-image: url("../images/modal-window/checkbox.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
   -webkit-transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 480px) {
+  .modal-form-check-policy-title::before {
+    width: 16px;
+    height: 15px;
+  }
+}
+
 .modal-form-check-policy:checked + .modal-form-check-policy-title::before {
   background-image: url("../images/modal-window/checkbox-checked.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .modal-form-check-policy:focus + .modal-form-check-policy-title::before {
@@ -1620,6 +1642,7 @@ body.modal-open {
   width: 30px;
   height: 30px;
   color: #000000;
+  background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
