@@ -168,9 +168,6 @@
 
   @include screen(tablet) {
     display: flex;
-    & .active {
-      color: $accent-color;
-    }
 
     & .link {
       display: block;
@@ -185,7 +182,8 @@
       @include transition-1-selector(color);
 
       &:hover,
-      &:focus {
+      &:focus,
+      &.active {
         color: $accent-color;
       }
     }
